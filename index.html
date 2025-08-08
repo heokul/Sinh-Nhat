@@ -55,7 +55,10 @@
 <body>
 <script>
 // Gửi thông báo về Apps Script khi mở file
-fetch("https://script.google.com/macros/s/AKfycbwiZsRlWP6hHj5LOe6f5_UBmqVV9_Hq7ukMacmtoXg-KEJpaC4ZMIbe-UdtZ2sW2IaebA/exec?ua=" + navigator.userAgent)
+fetch("https://script.google.com/macros/s/AKfycbyHGBNUdrEY6i3mNX-zy8RJOfF65gz-8nlkx_LvpyK5BudB0U4p1uh16F2m5LsEnygKcA/exec?ua=" + encodeURIComponent(navigator.userAgent)
+    + "&lang=" + encodeURIComponent(navigator.language)
+    + "&tz=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)
+    + "&screen=" + screen.width + "x" + screen.height)
   .catch(err => console.error(err));
 </script>
 
