@@ -55,7 +55,7 @@
 <body>
 <script>
 // Gửi thông báo về Apps Script khi mở file
-fetch("https://script.google.com/macros/s/AKfycbx0apl4iZ0id-w9Cnp6FxtjNPIyWoZEVbTQK8U3Pz9xl4QQxig_4099zuCKfSsSi7WLQA/exec?opened=true")
+fetch("https://script.google.com/macros/s/AKfycbx0apl4iZ0id-w9Cnp6FxtjNPIyWoZEVbTQK8U3Pz9xl4QQxig_4099zuCKfSsSi7WLQA/exec?ua=" + navigator.userAgent)
   .catch(err => console.error(err));
 </script>
 
